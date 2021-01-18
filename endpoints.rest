@@ -1,0 +1,40 @@
+GET http://localhost:5000/api/items
+
+###
+
+POST http://localhost:5000/api/items
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDU1ZjdhZjE0OTI3ZmFkZjM1ODNiOCIsImlhdCI6MTYxMDk2OTY0NiwiZXhwIjoxNjEwOTczMjQ2fQ.raFmF4ZJSEWVW5zmdwPyWucBRil1PSO2XujfCp1sIao
+
+{
+    "name": "Milk"
+}
+
+###
+DELETE http://localhost:5000/api/items/6000613ba4f05c789cc19bd4
+
+###
+
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "name": "Agus",
+    "email": "aguspruebas@gmail.com",
+    "password": "1234567a"
+}
+
+###
+POST http://localhost:5000/api/auth
+Content-Type: application/json
+
+{
+    "name": "Agus",
+    "email": "aguspruebas@gmail.com",
+    "password": "1234567a"
+}
+
+###
+GET http://localhost:5000/api/auth/user
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDU1ZjdhZjE0OTI3ZmFkZjM1ODNiOCIsImlhdCI6MTYxMDk2OTY0NiwiZXhwIjoxNjEwOTczMjQ2fQ.raFmF4ZJSEWVW5zmdwPyWucBRil1PSO2XujfCp1sIao
